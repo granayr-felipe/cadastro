@@ -1,158 +1,58 @@
-/* Container geral do formulário */
-.container_form {
-  width: 700px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  box-shadow: 1px 0px 1.2px 0px #e3e3e3;
-  border-radius: 3px;
-  padding: 1em;
-}
-
-/* Cabeçalho do formulário */
-.container_form h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.3em;
-  color: #00dae0;
-  border-bottom: 1px solid #f0eded;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-
-/* Grupo de cada campo do formulário */
-.form_grupo {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-/* Legenda para as opções de campos */
-.form_grupo .legenda {
-  width: 100%;
-  float: left;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-/* Estilo do botão de envio */
-.submit {
-  width: 100%;
-  float: left;
-}
-
-.submit_btn {
-  float: left;
-  display: block;
-  padding: 5px 30px;
-  border: none;
-  outline: none;
-  background-color: #6fcffb;
-  color: #fff;
-  text-shadow: 0 0 5px rgb(0, 0, 0);
-  font-family: inherit;
-  font-size: 25px;
-  font-family: 'Open Sans', sans-serif;
-  border-radius: 6px;
-  margin: 20px auto;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.submit_btn:hover {
-  background-color: #444444;
-  transform: scale(1.03);
-}
-
-/* Estilo do dropdown */
-.dropdown {
-  display: block;
-  margin: 0 auto;
-  font-size: 16px;
-  font-family: inherit;
-  color: #222222;
-  border-radius: 4px;
-  border: 1px solid #f2f2f2;
-  background: #fdfdfd;
-  outline: none;
-  padding-left: 10px;
-  width: 100%;
-}
-
-/* Esconde os inputs do tipo radio e checkbox */
-.form_new_input {
-  display: none;
-}
-
-/* Estilo dos rótulos dos inputs de radio e checkbox */
-.radio_label,
-.check_label {
-  float: left;
-  width: 100%;
-  padding-left: 30px;
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-.radio_new_btn, .check_new_btn {
-  position: absolute;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 0.2em solid #4c4c4c;
-}
-
-.radio_new_btn::after,
-.check_new_btn::after {
-  content: "";
-  height: 8px;
-  width: 8px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #6fcffb;
-  visibility: hidden;
-}
-
-/* Estilo dos inputs de radio e checkbox quando selecionados */
-.form_new_input:checked ~ .radio_label .radio_new_btn::after,
-.form_new_input:checked ~ .check_label .check_new_btn::after {
-  visibility: visible;
-}
-
-.form_new_input:checked ~ .radio_label,
-.form_new_input:checked ~ .check_label {
-  color: #6fcffb;
-}
-
-/* Estilo dos inputs text, email, date e textarea */
-.form_input {
-  font-size: 16px;
-  font-family: inherit;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 1px solid #f2f2f2;
-  background: #fdfdfd;
-  outline: none;
-  width: 100%;
-  transition: all 0.3s;
-}
-
-/* Estilo para a área de mensagem */
-.form_message,
-.form_message .message_input {
-  width: 100%;
-  float: left;
-}
-
-.form_message_label {
-  width: 100%;
-  float: left;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
+/* Estilos para o cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #00dae0; /* Cor de fundo do cabeçalho */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+  }
+  
+  .header_logo .logo {
+    max-height: 50px; /* Ajusta a altura da logo */
+    max-width: 100%;
+  }
+  
+  .nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav_menu li {
+    margin-right: 20px;
+  }
+  
+  .nav_menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav_menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .nav_menu a:hover {
+    color: #333; /* Cor ao passar o mouse sobre o link */
+  }
+  
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav_menu ul {
+      flex-direction: column;
+    }
+  
+    .nav_menu li {
+      margin-bottom: 10px;
+    }
+  }
+  

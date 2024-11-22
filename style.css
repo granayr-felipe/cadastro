@@ -124,7 +124,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #6fcffb;
+    background-color: #f70000;
     visibility: hidden;
   }
   
@@ -136,7 +136,7 @@
   
   .form_new_input:checked ~ .radio_label,
   .form_new_input:checked ~ .check_label {
-    color: #6fcffb;
+    color: #fd0000;
   }
   
   /* Estilo dos inputs text, email, date e textarea */
